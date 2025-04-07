@@ -5,6 +5,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res)=>{
+  res.json({message:"Bienvenido a API03 de SIASIS"}).status(200)
+})
+
 // Endpoint para obtener la hora actual del servidor en una zona horaria especificada
 app.get("/api/time", (req: Request, res: Response) => {
   try {
