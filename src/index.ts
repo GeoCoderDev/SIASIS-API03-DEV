@@ -5,14 +5,11 @@ import { obtenerConfiguracionActual } from "./utils/obtenerConfiguracionActual";
 import { GITHUB_GIST_ID, GITHUB_TOKEN } from "./config/GIST_DATA";
 import { getMockedServerTime } from "./mock/getMockedServerTime";
 
-
 // Cargar variables de entorno
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-
 
 app.get("/", (req, res) => {
   res.json({ message: "Bienvenido a API03 de SIASIS" }).status(200);
